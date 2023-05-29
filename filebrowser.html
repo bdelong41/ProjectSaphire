@@ -1,0 +1,149 @@
+<html lang="en">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+    <script src="dataBase.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+  function resizeTable(){
+    var tableContentHeight = $("#table-pane").height();
+    var headerHeight = $("#content-pane").height();
+    $("#table-div").height((tableContentHeight - headerHeight - 10));
+  }
+  $(document).ready(function(){
+    resizeTable();
+    addEventListener("resize", (event) => {resizeTable();});
+
+            });
+</script> 
+
+  
+<body>
+  <section id="page">
+    <header class="header">  <ul>
+      <li class="grip-image">        
+        <img src="images/fillGridGrid.png" class="men-select"> 
+    </li>
+    <li><label class="logo"> Samba </label></li>
+    <li class = "formLi">
+        <form> 
+        <img src="images/search.png" class="search"> 
+        <input id="search-bar" type="text" placeholder="Search">
+        </form>
+    </li>
+    <li>
+        <div class = "navButtons">                
+            <img src="images/folder.png" alt="">
+            <img src="images/folder.png" alt="">
+            <img src="images/folder.png" alt="">
+            <img src="images/folder.png" alt="">
+        </div>
+  
+    </li>
+    </ul></header>
+    <nav class = "left-nav">
+      <div class="sidebar">
+        <h4>Brenden DeLong</h4>
+        <ul>
+        <li id="files-left-nav">Files</li>
+        <li id="images-left-nav">Photos</li>
+        <li id="documents-left-nav">Documents</li>
+        <li id="recycle-left-nav">Recycle bin</li>
+        <a href=""></a></ul> 
+    </div>
+    </nav>
+    <main class = "main-content">
+      <div class="filenav-pane"> 
+        <ul>
+          <li> 
+            <div class="file-buttons">
+              <ul class="file-buttons-ul" id="file-buttons"> 
+                <li><label> +New  </label> <div class = "Submenu-1">
+                  <ul>
+                    <li>File</li>
+                    <li>Folder</li>
+                  </ul>
+                </div></li>
+                <li>
+                  <label> Upload </label>
+                  <div class = "Submenu-1">
+                    <ul>
+                      <li class = "upload-header-menu">File</li>
+                      <li class = "folder-header-menu">Folder</li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              
+              </div></li>
+          <li><div class="right-buttons">          
+              <ul class="file-buttons-ul" id="right-buttons">
+                <li><label>Sort</label>
+                <div class="Submenu-1">
+                  <ul>
+                    <li>Name</li>
+                    <li>Modified</li>
+                    <li>Ascending</li>
+                    <li>Descending</li>
+                  </ul>
+                </div></li>
+                <li>
+                  <label>View</label>
+                  <div class="Submenu-1">
+                    <ul>
+                      <li id="listview">List</li>
+                      <li id="iconview">Icons</li>
+                    </ul>
+                  </div>
+                </li>
+
+              </ul>
+          </div>
+        </li>
+        </ul>
+      </div>
+      <div id="table-pane" class="table-pane">
+        <div id="content-pane" class = "content-pane"> 
+          <table><tbody><tr id="dirTable" class="dirTable"><td class="dNavItem">Home</td><td><img src="/images/SingleArrow.png" width="15"></td><td class="dNavItem">Documents</td><td><img src="/images/SingleArrow.png" width="15"></td><td class="dNavItem">Python</td><td><img src="/images/SingleArrow.png" width="15"></td><td class="dNavItem">WXPython</td></tr></tbody></table>
+        </div>
+        <div id="table-div" class = "table-div">
+          <div><img class="file-icon" src="fileImage.JPG"><label class="fileText">1.1.1.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">3D Ch.apk</label></div><div><img class="file-icon" src="fileImage.JPG" 
+            ><label class="fileText">ASTRO.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Adobe.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">AirCo.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Amazo.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Andro.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Andro.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Andro.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">App B.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Avast.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Brain.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">CM Sp.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">CNN-c.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">CamSc.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Clock.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Cours.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Cross.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Cryst.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Digit.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Disk .apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Dolph.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Dripp.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Drive.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">EasyA.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Evern.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Evern.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Every.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Firef.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Firef.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Firef.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Fit B.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Flipb.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Flixs.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">GPlay.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">GetJa.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Gmail.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Go Fr.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Googl.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Googl.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Googl.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Googl.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Googl.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Googl.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Googl.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Googl.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Googl.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Googl.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Googl.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Graph.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">HDV D.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">HP Pr.apk</label></div><div><img class="file-icon" 
+          src="fileImage.JPG"   ><label class="fileText">Hango.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Horiz.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Inoti.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Ionag.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">KhAnd.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">KhAnd.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Khan .apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Khan .apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Kings.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Kings.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Mahjo.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Malwa.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Maps-.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Mathl.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Maths.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Memor.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Merri.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Mobil.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">NHN-1.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">PS2E-.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Paint.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Priva.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Readm.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Simpl.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Simpl.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Spoti.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">TalkB.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">UC Br.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Unblo.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Upgra.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Video.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Video.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">WPS O.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">YHome.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">YouTu.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">YuGiO.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Z21 U.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">Zip V.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">kings.apk</label></div><div><img class="file-icon" src="fileImage.JPG"   ><label class="fileText">quake.apk</label></div>
+        </div>
+
+    </div>
+    </main>
+    <footer></footer>
+  </section>
+
+  <div id="context-menu">
+    <div class="item open">Open</div>
+    <div class="item copy">Copy</div>
+    <div class="item paste">Paste</div>
+    <div class="item cut">Cut</div>
+    <div class="item download" id="download">Download</div>
+    <div class="item delete">Delete</div>
+</div>
+
+<form id = "upload-file-form" action="upload.php" method="post" enctype="multipart/form-data" width="0px" height="0px">
+  Select image to upload:
+  <input type="file" name="fileToUpload" id="filesToUpload" width="0" height="0">
+  <input type="submit" value="Upload File" name="submit" width="0px" height="0px" id = "submit-files">
+</form>
+<form action="uploadDirectory.php" name="myForm" method="post" enctype="multipart/form-data"> 
+  Type Folder Name:<input type="text" name="foldername" /><br/><br/>
+  Select Folder to Upload: <input type="file" name="files[]" id="files" multiple directory="" webkitdirectory="" moxdirectory="" /><br/><br/> 
+  <input type="Submit" value="Upload" name="upload" id="uploadFolder" />
+  </form>
+
+  <div id="tooltip" class="tooltip">Hover over me
+    <span id="tooltiptext" class="tooltiptext">Tooltip text</span>
+  </div>
+</body>
+</html>

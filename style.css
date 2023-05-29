@@ -1,0 +1,447 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+img
+{
+    width: 25px;
+    height: 25px;
+}
+#page {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+      "head head"
+      "nav  main"
+      "nav  foot";
+    grid-template-rows: 50px 1fr 30px;
+    grid-template-columns: 225px 1fr;
+  }
+  
+  #page > header {
+    grid-area: head;
+    background-color: rgb(70, 151, 204);
+    text-align: center;
+  }
+  
+  #page > nav {
+    grid-area: nav;
+    /* background-color: #ffa08c; */
+  }
+  
+  #page > main {
+    grid-area: main;
+    /* background-color: #ffff64; */
+    display: grid;
+    grid-template-rows: 50px;
+  }
+  
+  #page > footer {
+    grid-area: foot;
+    /* background-color: #8cffa0; */
+  }
+
+  .header ul {
+    display: grid;
+    grid-template-columns: .06fr 1fr 1fr 1fr;
+    list-style-type: none;
+    height: 50px;
+    align-content: center;
+  }
+.header ul img
+{
+    width: 25px;
+    height: 30px;
+}
+.header ul li
+{
+    margin: 6px;
+    /* border: solid black; */
+}
+.header ul li .men-select
+{
+    float: left;
+}
+.header ul li label
+{
+    float: left;
+    position: top;
+    line-height: 30px;
+}
+.header ul li form{
+    /* border: solid red; */
+    display: flex;
+}
+.header ul li form input
+{
+    width: 100%;
+    border: none;
+}
+.header ul li .navButtons
+{
+    float: right;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+.left-nav
+{    
+    display: flex;
+    position: relative;
+    float: left;
+
+}
+
+.left-nav .sidebar
+{
+    position: fixed;
+    width: 225px;
+    height: 100%;
+    background: #f4f3fa;
+    padding: 30px 0;
+}
+
+.left-nav .sidebar h4{
+    color: rgb(0, 0, 0);
+    /* text-transform: uppercase; */
+    text-align: center;
+    margin-bottom: 30px;
+    font-style: italic;
+    font-size: 20px;
+
+}
+
+.left-nav .sidebar ul li{
+    padding: 15px;
+    
+    /* border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(225, 225, 225, 0.05); */
+
+}
+.filenav-pane
+{
+    background-color: white;
+    text-align: center;
+}
+.content-pane{
+    display: flex;
+    align-content: center;
+}
+.content-pane table{
+    margin-left: 6px;
+}
+.content-pane img{
+    width: 15px;
+    height: 15px;
+}
+/* .dirTable{
+    background-color: blue;
+    display: inline;
+    position: relative;
+    align-content: center;
+} */
+
+
+
+.filenav-pane ul {
+    display: grid;
+    grid-template-columns: .1fr 1fr ;
+    list-style-type: none;
+    height: 50px;
+    align-items: center;
+    /* border-bottom: solid black; */
+  }
+
+  .filenav-pane ul li
+{
+    margin: 0px;
+}
+/* .filenav-pane ul li .file-buttons
+{
+    display: inline-flex;
+    float: left;
+    margin-left: 6px
+} */
+/* .filenav-pane .right-buttons{
+    display: inline-flex;
+    align-content: center;
+} */
+.filenav-pane ul li .right-buttons 
+{
+    display: inline;
+    float: right;
+    margin-right: 100px;
+}
+.right-buttons label{
+    background-color:rgb(70, 151, 204);
+    margin-left: 10px;
+    margin-right: 15px;
+    font-size: 15;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.right-buttons ul li label:hover{
+    background-color: grey;
+    border-radius: 1px;
+}
+.Submenu-1
+{
+    display: none;
+}
+.right-buttons ul li:hover .Submenu-1{
+    display:block;
+    position: absolute;
+    background: grey;
+    margin-top: 3px;
+    margin-left: -100px;
+    height: 200px;
+}
+.right-buttons ul li:hover .Submenu-1 ul 
+{
+    display: block;
+    margin: 30px;
+}
+.right-buttons ul li:hover .Submenu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.right-buttons ul li:hover .Submenu-1 ul li:last-child{
+    border-bottom: none;
+}
+.right-buttons ul li:hover .Submenu-1 ul li:hover{
+    color:#b2ff00;
+}
+
+
+.file-buttons label
+{
+    background-color:rgb(70, 151, 204);
+    margin-right: 10px;
+    font-size: 15;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+/* file button styles */
+
+.file-buttons ul li label:hover{
+    background-color: grey;
+    border-radius: 1px;
+}
+
+/* .file-buttons-ul li{
+    background-color: brown;
+} */
+.Submenu-1
+{
+    display: none;
+}
+.file-buttons ul li:hover .Submenu-1{
+    display:block;
+    position: absolute;
+    background: grey;
+    margin-top: 3px;
+    margin-left: -3px;
+}
+.file-buttons ul li:hover .Submenu-1 ul 
+{
+    display: block;
+    margin: 30px;
+}
+.file-buttons ul li:hover .Submenu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.file-buttons ul li:hover .Submenu-1 ul li:last-child{
+    border-bottom: none;
+}
+.file-buttons ul li:hover .Submenu-1 ul li:hover{
+    color:#b2ff00;
+}
+.table-pane
+{
+    /* background-color: blue; */
+    display: grid;
+    /* grid-template-rows: 50px 700px; */
+
+    grid-template-rows: 50px;
+}
+
+.content-pane img{
+    width: 20px;
+    height: 20px;
+}
+
+.table-div{
+    border: solid 1px lightgrey;
+    height: 10px;
+    overflow-y: auto;
+}
+.table-div img{
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+.table-div div{
+    display: inline-block;
+    margin: 10px;
+    width: 12%;
+    height: 60px;
+    align-items: center;
+    margin-left: 6%;
+}
+.table-div ul {
+    list-style: none;
+}
+
+/* list table format */
+/* color and border */
+.list-table-div {
+    border: solid 1px lightgrey;
+    height: 10px;
+    overflow-y: auto;
+}
+.list-table-div img{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+.list-table-div .file-containerdiv{
+    display: flex;
+    margin: 10px;
+    width: 70%;
+    height: 30px;
+    align-items: center;
+    margin-left: 6%;
+}
+.list-table-div ul li{
+    display: inline-block;
+}
+.icon-labeldiv{
+    width: 300px;
+}
+.icon-datediv{
+    margin-left: 50px;
+}
+.icon-sizediv{
+    margin-left: 50px;
+}
+.TableHeaderClass{
+    display: flex;
+    margin: 10px;
+    width: 70%;
+    height: 50px;
+    align-items: center;
+    /* margin-left: 6%; */
+    font-weight: bold;
+    border-bottom: 1px solid lightgrey;
+}
+.TableHeaderClass img {
+    margin-left: 60px;
+}
+
+
+
+/* miscelaneous styels */
+.navButtons{
+    display: none;
+}
+
+/*Context-menu styles*/
+
+#context-menu
+{
+    position: fixed;
+    z-index: 10000;
+    width: 150px;
+    background: #1b1a1a;
+    border-radius: 5px;
+    /* display: none; */
+    transform: scale(0);
+    transform-origin: top left;
+}
+#context-menu.visible
+{
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
+    /* display: block; */
+}
+#context-menu .item
+{
+    padding: 8px 10px;
+    font-size: 15px;
+    color: #eee;
+    cursor: pointer;
+    border-radius: inherit;
+}
+
+#context-menu .item:hover{
+    background: #343434;
+}
+
+/* form styles */
+input[type=file]{
+    display:none;
+}
+input[type=submit]{
+  display:none;
+}
+form{
+  display:none;
+}
+
+/* tool tip */
+/* Tooltip container */
+.tooltip {
+    /* position: relative;
+    display: inline-block; */
+    /*border-bottom: 1px dotted black;  If you want dots under the hoverable text */
+    position: fixed;
+    z-index: 10000;
+    width: 150px;
+    background: #1b1a1a;
+    border-radius: 5px;
+    /* display: none; */
+    transform: scale(0);
+    transform-origin: top left;
+    font-size: 15px;
+    color: #eee;
+    word-wrap: break-word;
+  }
+  #tooltip.visible{
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
+    /* display: block; */
+  }
+  
+  /* Tooltip text */
+  /* .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    */
+    /* Position the tooltip text - see examples below! */
+    /* position: absolute;
+    z-index: 1;
+  } */
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  /* .tooltip:hover .tooltiptext {
+    visibility: visible;
+  } */
