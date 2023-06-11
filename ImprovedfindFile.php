@@ -1,15 +1,19 @@
 <?php
 $name = $_POST["request"];
+
+
 // $dName = strval($name);
 
+$name = "MenuTest.py";
+
 // $name = "fillGridGrid.png";
-$root = strval("/home/user/fileBrowserShare");
+$root = strval("/home/ankle/Documents/apacheWebsites/fileExplorer/fileExplorer/explorerShare");
 // $name = strval("shipping.jpg");
 $length = strlen($root);
 
 
 $servername = "localhost";
-$username = "root";
+$username = "user";
 $password = "password";
 
 // Create connection

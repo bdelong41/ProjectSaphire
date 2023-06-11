@@ -3,13 +3,11 @@ $directoryID = $_POST['directoryID'];
 $sortMethod = $_POST['sortMethod'];// name, date, size
 
 // $directoryID = 774;
-
-
 $servername = "localhost";
-$username = "root";
+$username = "user";
 $password = "password";
 
-$root = "/home/user/fileBrowserShare/";
+$root = "/home/ankle/Documents/apacheWebsites/fileExplorer/fileExplorer/";
 // Create connection
 $conn = new mysqli($servername, $username, $password);
 $fileList = array();
@@ -62,6 +60,7 @@ if($row > 0){
         inner join (select * from Directories) as D
         on F.Parent_ID = D.Directory_ID
         where F.Parent_ID = $directoryID and not F.Directory_ID in (select Directory_ID from MoveFiles union select Directory_ID from copiedFiles union select Directory_ID from HiddenFiles)
+        and F.Hidden = 0
         order by F.Directory_Name asc;";
         $result = $conn->query($query);
 
@@ -99,6 +98,7 @@ if($row > 0){
         inner join (select * from Directories) as D
         on F.Parent_Directory = D.Directory_ID
         where F.Parent_Directory = $directoryID and not F.File_ID in (select File_ID from MoveFiles union select File_ID from copiedFiles union select File_ID from HiddenFiles)
+        and F.Hidden = 0
         order by F.Name asc;";
 
         $result = $conn->query($query);

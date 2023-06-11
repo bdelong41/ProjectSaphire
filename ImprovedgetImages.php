@@ -1,10 +1,10 @@
 <?php
-$root = strval("/home/user/fileBrowserShare");
+$root = strval("/home/ankle/Documents/apacheWebsites/fileExplorer/fileExplorer");
 $length = strlen($root);
 // $name = "";
 
 $servername = "localhost";
-$username = "root";
+$username = "user";
 $password = "password";
 // Create connection
 $conn = new mysqli($servername, $username, $password);

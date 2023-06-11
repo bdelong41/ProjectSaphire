@@ -97,6 +97,19 @@ function searchFiles(requested){
     request.send(params)
 }
 
+function  copyFiles(isFile, id, dest){
+    let request = new XMLHttpRequest()
+    let params = new FormData
+    params.append('isFile', isFile)
+    params.append('id', id)
+    params.append('dest', dest)
+    request.open("POST", "CopyDirectory.php")
+    request.onload = function(){
+        loadDirectory(dest)
+    }
+    request.send(params)
+}
+
 function loadtableheader(){
     if(tableFormat != "list") return
     var table = document.getElementById("table-div")
@@ -411,8 +424,10 @@ $(document).ready(function(){
         }
         else if($(e.target).hasClass("paste")){
             pasteDest = allFiles[selector.alt][1] + "/" + allFiles[selector.alt][0]
+            if(copied == null) {return}
             alert("Item pasted: " + pasteDest)
-            paste(copied, pasteDest, "")
+            // paste(copied, pasteDest, "")
+            copyFiles(copied[2], copied[1], allFiles[selector.alt][1])
             console.log("Paste Seseme")
             //clearing buffer
             copied = ""
@@ -420,7 +435,7 @@ $(document).ready(function(){
             contextMenu.classList.remove("visible")
         }
         else if($(e.target).hasClass("copy")){
-            copied = allFiles[selector.alt][1] + "/" + allFiles[selector.alt][0]
+            copied = allFiles[selector.alt]
             alert("Item copied: " + copied)
             console.log("Copy Seseme")
             contextMenu.classList.remove("visible")
@@ -507,6 +522,4 @@ $(document).ready(function(){
             }
         }
     })
-
-
 })
