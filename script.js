@@ -13,7 +13,7 @@ function loadDirectory(directoryID){
     var params = new FormData
     params.append('directoryID', directoryID)
     params.append('sortMethod', 'name')
-    request.open("POST", "DatabaseOpenDirectory.php")
+    request.open("POST", "OpenDirectory.php")
     request.onload = function(){
         var jsvar = this.response
         jsvar = JSON.parse(jsvar)
@@ -32,7 +32,7 @@ function loadImages(){
     var request = new XMLHttpRequest();
     var params = new FormData;
     params.append('request', currentDir);
-    request.open("POST", "ImprovedgetImages.php");
+    request.open("POST", "GetImages.php");
     request.onload = function(){
         var jsvar = this.response;
         jsvar = JSON.parse(jsvar);
@@ -49,7 +49,7 @@ function loadDocuments(){
     var request = new XMLHttpRequest();
     var params = new FormData;
     params.append('request', currentDir);
-    request.open("POST", "ImprovedgetDocuments.php");
+    request.open("POST", "GetDocuments.php");
     request.onload = function(){
         var jsvar = this.response;
         jsvar = JSON.parse(jsvar);
@@ -67,7 +67,7 @@ function loadRecycleBin(){
     var request = new XMLHttpRequest();
     var params = new FormData;
     params.append('request', currentDir);
-    request.open("POST", "ImprovedgetRecycle.php");
+    request.open("POST", "GetRecycle.php");
     request.onload = function(){
         var jsvar = this.response;
         jsvar = JSON.parse(jsvar);
@@ -85,7 +85,7 @@ function searchFiles(requested){
     let request = new XMLHttpRequest()
     let params = new FormData
     params.append('request', requested)
-    request.open("POST", "ImprovedfindFile.php")
+    request.open("POST", "FindFile.php")
     request.onload = function(){
         var jsvar = this.response
         jsvar = JSON.parse(jsvar)
